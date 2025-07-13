@@ -56,6 +56,7 @@ app.post('/graphql-proxy', async (req, res) => {
         flattenedResponse[`${keyPrefix}Title_${lang}`] = item.title || '';
         flattenedResponse[`${keyPrefix}PreTitle_${lang}`] = item.preTitle || '';
         flattenedResponse[`${keyPrefix}Description_${lang}`] = item.description?.plaintext || '';
+        flattenedResponse[`${keyPrefix}Path_${lang}`] = item._path || '';
       }
     });
 
